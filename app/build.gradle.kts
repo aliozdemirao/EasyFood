@@ -33,6 +33,10 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    buildFeatures{
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -44,10 +48,9 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
-    val nav_version = "2.6.0"
     // navigation component
-    implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
-    implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.6.0")
+    implementation("androidx.navigation:navigation-ui-ktx:2.6.0")
 
     // intuit
     implementation("com.intuit.sdp:sdp-android:1.0.6")
@@ -55,5 +58,12 @@ dependencies {
 
     // gif
     implementation("pl.droidsonroids.gif:android-gif-drawable:1.2.17")
+
+    // retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.3.0")
+
+    // glide
+    implementation("com.github.bumptech.glide:glide:4.12.0")
 
 }
